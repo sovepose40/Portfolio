@@ -3,44 +3,86 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfolio of Adam Kjær Persson - Game Developer"
+    >
 
     <title>Adam Kjær Persson - Game Developer</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
 <div class="site">
 
-    <header>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-        <h1>Adam Kjær Persson</h1>
+    <header id="home">
 
-        <p class="subtitle">
-            game developer / unreal engine
-        </p>
+        <div class="header-top">
+
+            <div>
+
+                <h1>Adam Kjær Persson</h1>
+
+                <p class="subtitle">
+                    game developer / unreal engine / 3d
+                </p>
+
+            </div>
+
+            <div class="status">
+                © 2026
+            </div>
+
+        </div>
+
 
         <nav>
+
             <a href="#home">home</a>
             <span>...</span>
 
-            <a href="#projects">projects</a>
+            <a href="#games">games</a>
+            <span>...</span>
+
+            <a href="#systems">systems</a>
+            <span>...</span>
+
+            <a href="#art">3d/art</a>
+            <span>...</span>
+
+            <a href="#blog">blog</a>
             <span>...</span>
 
             <a href="#about">about</a>
             <span>...</span>
 
             <a href="#contact">contact</a>
+
         </nav>
 
     </header>
 
 
-    <main id="home">
+    <main>
 
-        <section>
+        <!-- =====================================================
+             WELCOME
+        ====================================================== -->
+
+        <section class="welcome">
 
             <h2>WELCOME</h2>
 
@@ -49,22 +91,55 @@
             </p>
 
             <p>
-                I make games and gameplay systems in Unreal Engine.
-                I mostly enjoy working on movement, combat,
-                multiplayer systems and experimental game mechanics.
+                I make games, gameplay systems and experimental
+                prototypes, mainly using Unreal Engine.
             </p>
+
+            <p>
+                I enjoy working on responsive movement, combat,
+                multiplayer systems, procedural mechanics,
+                game feel and weird ideas.
+            </p>
+
 
             <div class="buttons">
 
-                <a href="https://github.com/sovepose40" class="badge">
+                <a
+                    href="https://github.com/sovepose40"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="badge"
+                >
                     GitHub
                 </a>
 
-                <a href="https://store.steampowered.com/developer/sovestudio" class="badge">
+
+                <a
+                    href="https://store.steampowered.com/developer/sovestudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="badge"
+                >
                     Steam
                 </a>
 
-                <a href="https://www.youtube.com/@sovepose40" class="badge">
+
+                <a
+                    href="https://sovepose40.itch.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="badge"
+                >
+                    itch.io
+                </a>
+
+
+                <a
+                    href="https://www.youtube.com/@sovepose40"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="badge"
+                >
                     YouTube
                 </a>
 
@@ -73,195 +148,855 @@
         </section>
 
 
-        <section id="projects">
 
-            <h2>PROJECTS</h2>
+        <!-- =====================================================
+             GAMES
+        ====================================================== -->
+
+        <section id="games">
+
+            <div class="section-title">
+
+                <h2>GAMES</h2>
+
+                <span>
+                    released / playable projects
+                </span>
+
+            </div>
 
 
-            <article class="project">
 
-                <img
-                    src="images/project1.gif"
-                    alt="Gameplay"
-                >
+            <!-- GAME 1 -->
 
-                <div class="project-text">
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        MY STEAM GAME
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <img
+                        src="images/game1.gif"
+                        alt="Gameplay from my game"
+                    >
+
 
                     <h3>MY STEAM GAME</h3>
 
-                    <p class="date">
-                        [2026]
+                    <p>
+                        A multiplayer game built in Unreal Engine.
                     </p>
 
                     <p>
-                        Multiplayer game built in Unreal Engine.
                         I worked on gameplay programming,
-                        networking and player systems.
+                        multiplayer systems, player interaction
+                        and game mechanics.
                     </p>
 
-                    <div class="project-links">
 
-                        <a href="#">Steam</a>
+                    <p class="tech">
+                        Unreal Engine 5 /
+                        Blueprints /
+                        Multiplayer /
+                        Gameplay Programming
+                    </p>
+
+
+                    <div class="links">
+
+                        <a
+                            href="https://store.steampowered.com/developer/sovestudio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Steam
+                        </a>
 
                         <span>...</span>
 
-                        <a href="#">Gameplay</a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="project">
-
-                <img
-                    src="images/parkour.gif"
-                    alt="Parkour gameplay"
-                >
-
-                <div class="project-text">
-
-                    <h3>PARKOUR SYSTEM</h3>
-
-                    <p class="date">
-                        [2026]
-                    </p>
-
-                    <p>
-                        A movement prototype featuring wallrunning,
-                        vaulting, sliding and responsive traversal.
-                    </p>
-
-                    <div class="project-links">
-
-                        <a href="#">
-                            Watch Video
+                        <a
+                            href="https://sovepose40.itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            itch.io
                         </a>
 
                     </div>
 
                 </div>
 
-            </article>
+            </details>
 
 
-            <article class="project">
 
-                <img
-                    src="images/combat.gif"
-                    alt="Combat gameplay"
-                >
+            <!-- GAME 2 -->
 
-                <div class="project-text">
+            <details class="entry">
 
-                    <h3>COMBAT PROTOTYPE</h3>
+                <summary>
 
-                    <p class="date">
+                    <span class="entry-date">
                         [2026]
-                    </p>
+                    </span>
+
+                    <span class="entry-name">
+                        SECOND GAME
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <div class="media-placeholder">
+                        add image / gif here
+                    </div>
+
+
+                    <h3>SECOND GAME</h3>
 
                     <p>
-                        Third-person combat experiment focused on
-                        satisfying shooting, melee and physics reactions.
+                        Add information about another released
+                        or playable project here.
                     </p>
+
+
+                    <div class="links">
+
+                        <a href="#">
+                            Steam
+                        </a>
+
+                        <span>...</span>
+
+                        <a href="#">
+                            Gameplay
+                        </a>
+
+                    </div>
 
                 </div>
 
-            </article>
+            </details>
 
         </section>
 
 
-        <section>
 
-            <h2>EXPERIMENTS</h2>
+        <!-- =====================================================
+             SYSTEMS / PROTOTYPES
+        ====================================================== -->
 
-            <div class="list">
+        <section id="systems">
 
-                <a href="#">
-                    <span>[2026]</span>
-                    Procedural Forest Generator
-                </a>
+            <div class="section-title">
 
-                <a href="#">
-                    <span>[2026]</span>
-                    Digging Prototype
-                </a>
+                <h2>SYSTEMS / PROTOTYPES</h2>
 
-                <a href="#">
-                    <span>[2026]</span>
-                    Multiplayer Prototype
-                </a>
+                <span>
+                    gameplay experiments
+                </span>
 
-                <a href="#">
-                    <span>[2026]</span>
-                    Parkour Movement System
-                </a>
+            </div>
+
+
+
+            <!-- PARKOUR -->
+
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        PARKOUR MOVEMENT SYSTEM
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        controls
+                    >
+
+                        <source
+                            src="videos/parkour.mp4"
+                            type="video/mp4"
+                        >
+
+                    </video>
+
+
+                    <h3>Parkour Movement System</h3>
+
+                    <p>
+                        A custom third-person movement system
+                        focused on responsive and satisfying traversal.
+                    </p>
+
+
+                    <ul>
+
+                        <li>Wallrunning</li>
+                        <li>Vaulting</li>
+                        <li>Sliding</li>
+                        <li>Climbing</li>
+                        <li>Responsive camera movement</li>
+
+                    </ul>
+
+
+                    <p class="tech">
+                        Unreal Engine 5 /
+                        Blueprints /
+                        Animation /
+                        Character Movement
+                    </p>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- COMBAT -->
+
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        COMBAT SYSTEM
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <img
+                        src="images/combat.gif"
+                        alt="Combat gameplay"
+                    >
+
+
+                    <h3>Combat System</h3>
+
+                    <p>
+                        Third-person combat prototype focused
+                        on satisfying shooting, melee attacks
+                        and physics reactions.
+                    </p>
+
+
+                    <p class="tech">
+                        Unreal Engine /
+                        Physics /
+                        Animation /
+                        Gameplay Programming
+                    </p>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- PROCEDURAL -->
+
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        PROCEDURAL ENVIRONMENT SYSTEM
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <div class="media-placeholder">
+                        add procedural generation gif here
+                    </div>
+
+
+                    <h3>Procedural Environment System</h3>
+
+                    <p>
+                        An experiment with generating paths,
+                        terrain, forests and environmental layouts.
+                    </p>
+
+
+                    <p class="tech">
+                        Unreal Engine /
+                        Procedural Generation /
+                        Splines /
+                        PCG
+                    </p>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- DIGGING -->
+
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        DIGGING / DESTRUCTION PROTOTYPE
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <div class="media-placeholder">
+                        add digging gameplay here
+                    </div>
+
+
+                    <h3>Digging Prototype</h3>
+
+                    <p>
+                        An experimental mechanic allowing the
+                        player to carve, dig or create holes
+                        in parts of the environment.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             3D / ART
+        ====================================================== -->
+
+        <section id="art">
+
+            <div class="section-title">
+
+                <h2>3D / ART</h2>
+
+                <span>
+                    modelling / animation / textures
+                </span>
+
+            </div>
+
+
+
+            <!-- BLENDER -->
+
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        BLENDER WORK
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <div class="gallery">
+
+                        <img
+                            src="images/blender1.jpg"
+                            alt="Blender project"
+                        >
+
+                        <div class="media-placeholder">
+                            blender image
+                        </div>
+
+                        <div class="media-placeholder">
+                            blender image
+                        </div>
+
+                        <div class="media-placeholder">
+                            blender image
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Various modelling, rigging, animation,
+                        environment and asset work created in Blender.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- PIXEL ART -->
+
+            <details class="entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [2026]
+                    </span>
+
+                    <span class="entry-name">
+                        PIXEL ART / 2D WORK
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <div class="gallery">
+
+                        <img
+                            src="images/pixel1.png"
+                            alt="Pixel artwork"
+                        >
+
+                        <div class="media-placeholder">
+                            pixel art
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Pixel art, sprites and UI work created
+                        with Aseprite and other image tools.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SOFTWARE
+        ====================================================== -->
+
+        <section id="software">
+
+            <div class="section-title">
+
+                <h2>SOFTWARE / TOOLS</h2>
+
+                <span>
+                    programs I work with
+                </span>
+
+            </div>
+
+
+            <div class="software-list">
+
+
+                <div class="software-row">
+
+                    <strong>
+                        Unreal Engine 5
+                    </strong>
+
+                    <span>
+                        gameplay programming /
+                        blueprints /
+                        multiplayer /
+                        animation /
+                        procedural systems
+                    </span>
+
+                </div>
+
+
+                <div class="software-row">
+
+                    <strong>
+                        Blender
+                    </strong>
+
+                    <span>
+                        modelling /
+                        rigging /
+                        animation /
+                        asset creation
+                    </span>
+
+                </div>
+
+
+                <div class="software-row">
+
+                    <strong>
+                        GIMP
+                    </strong>
+
+                    <span>
+                        image editing /
+                        textures /
+                        graphics
+                    </span>
+
+                </div>
+
+
+                <div class="software-row">
+
+                    <strong>
+                        Aseprite
+                    </strong>
+
+                    <span>
+                        pixel art /
+                        sprites /
+                        UI graphics
+                    </span>
+
+                </div>
+
+
+                <div class="software-row">
+
+                    <strong>
+                        Git / GitHub
+                    </strong>
+
+                    <span>
+                        version control /
+                        project management
+                    </span>
+
+                </div>
+
 
             </div>
 
         </section>
 
 
+
+        <!-- =====================================================
+             BLOG
+        ====================================================== -->
+
+        <section id="blog">
+
+            <div class="section-title">
+
+                <h2>BLOG / DEVLOG</h2>
+
+                <span>
+                    project updates
+                </span>
+
+            </div>
+
+
+
+            <details class="entry blog-entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [08 SEP 2026]
+                    </span>
+
+                    <span class="entry-name">
+                        BUILDING MY PORTFOLIO
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <p>
+                        Started building my game development
+                        portfolio website.
+                    </p>
+
+                    <p>
+                        I wanted the website to feel more like
+                        an old personal developer site instead
+                        of a modern corporate portfolio.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="entry blog-entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [05 SEP 2026]
+                    </span>
+
+                    <span class="entry-name">
+                        PARKOUR SYSTEM UPDATE
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <p>
+                        Worked on improving movement,
+                        wallrunning and the general feel
+                        of the parkour system.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="entry blog-entry">
+
+                <summary>
+
+                    <span class="entry-date">
+                        [01 SEP 2026]
+                    </span>
+
+                    <span class="entry-name">
+                        NEW GAMEPLAY EXPERIMENT
+                    </span>
+
+                </summary>
+
+
+                <div class="entry-content">
+
+                    <p>
+                        Started experimenting with another
+                        gameplay mechanic in Unreal Engine.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
         <section id="about">
 
-            <h2>ABOUT</h2>
+            <div class="section-title">
+
+                <h2>ABOUT</h2>
+
+            </div>
+
 
             <p>
-                I'm a game developer focused on gameplay programming
-                and creating systems that feel satisfying to use.
+                I'm Adam Kjær Persson, a game developer
+                interested in gameplay programming,
+                systems design and creating mechanics
+                that feel satisfying to use.
             </p>
 
+
             <p>
-                Tools:
-                Unreal Engine 5,
-                Blueprints,
-                C++,
-                Blender
+                I mainly work in Unreal Engine and also
+                create 3D assets, animations, textures
+                and other game content.
             </p>
 
         </section>
 
 
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
         <section id="contact">
 
-            <h2>CONTACT</h2>
+            <div class="section-title">
+
+                <h2>CONTACT</h2>
+
+            </div>
+
 
             <p>
-                Email:
-                <a href="mailto:youremail@example.com">
-                    youremail@example.com
-                </a>
+                You can find my work here:
             </p>
 
-            <p>
-                <a href="#">GitHub</a>
-                ...
-                <a href="#">Steam</a>
-                ...
-                <a href="#">YouTube</a>
-            </p>
+
+            <div class="contact-list">
+
+                <p>
+                    GitHub:
+                    <a
+                        href="https://github.com/sovepose40"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        github.com/sovepose40
+                    </a>
+                </p>
+
+
+                <p>
+                    Steam:
+                    <a
+                        href="https://store.steampowered.com/developer/sovestudio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Sove Studio
+                    </a>
+                </p>
+
+
+                <p>
+                    itch.io:
+                    <a
+                        href="https://sovepose40.itch.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        sovepose40.itch.io
+                    </a>
+                </p>
+
+
+                <p>
+                    YouTube:
+                    <a
+                        href="https://www.youtube.com/@sovepose40"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        @sovepose40
+                    </a>
+                </p>
+
+
+                <!--
+                Add your email here later:
+
+                <p>
+                    Email:
+                    <a href="mailto:your@email.com">
+                        your@email.com
+                    </a>
+                </p>
+                -->
+
+            </div>
 
         </section>
 
     </main>
 
 
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
 
-        <a href="#home">
-            homepage
-        </a>
+        <div>
+
+            <a href="#home">
+                homepage
+            </a>
+
+            <span>...</span>
+
+            <a href="#games">
+                games
+            </a>
+
+            <span>...</span>
+
+            <a href="#blog">
+                blog
+            </a>
+
+        </div>
+
 
         <span>
-            Adam © 2026
+            Adam Kjær Persson © 2026
         </span>
 
     </footer>
 
 </div>
+
+
+<script src="script.js"></script>
 
 </body>
 
