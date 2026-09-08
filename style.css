@@ -1,7 +1,3 @@
-/* =========================================================
-   RESET
-========================================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -28,25 +24,20 @@ body {
 
     font-family:
         "Courier New",
-        Courier,
         monospace;
 
     font-size: 14px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
-
-/* =========================================================
-   MAIN SITE
-========================================================= */
 
 .site {
     width: min(850px, 94%);
 
     min-height: 100vh;
 
-    margin: 0 auto;
+    margin: auto;
 
     padding: 18px;
 
@@ -54,15 +45,8 @@ body {
 
     border-left: 1px solid #444;
     border-right: 1px solid #444;
-
-    box-shadow:
-        0 0 30px rgba(0, 0, 0, 0.8);
 }
 
-
-/* =========================================================
-   TEXT
-========================================================= */
 
 h1,
 h2,
@@ -78,165 +62,112 @@ h1 {
     font-size: 30px;
 
     letter-spacing: 1px;
-
-    color: #f3f3f3;
-
-    text-shadow:
-        2px 2px 0 #333;
 }
 
 
 h2 {
-    margin-bottom: 0;
-
-    font-size: 22px;
-
-    letter-spacing: 1px;
+    font-size: 21px;
 }
 
 
 h3 {
-    font-size: 18px;
-}
-
-
-p {
-    max-width: 750px;
+    font-size: 19px;
 }
 
 
 a {
-    color: #ffffff;
-
-    text-decoration: underline;
+    color: white;
 }
 
 
 a:hover {
-    color: #000000;
-
-    background: #ffffff;
+    background: white;
+    color: black;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+.subtitle,
+.date,
+.tech {
+    color: #888;
+}
+
 
 header {
-    padding-bottom: 14px;
+    padding-bottom: 15px;
 
     border-bottom: 1px dotted #666;
 }
 
 
-.header-top {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 20px;
-}
-
-
-.subtitle {
-    margin-bottom: 0;
-
-    color: #888;
-}
-
-
-.status {
-    color: #888;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
 nav {
-    margin-top: 15px;
+    margin-top: 14px;
 
-    padding: 7px 8px;
+    padding: 7px;
 
     background: #111;
-
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
 }
 
 
 nav span {
-    color: #777;
+    color: #666;
 }
 
-
-/* =========================================================
-   SECTIONS
-========================================================= */
 
 section {
     padding: 24px 0;
 
     border-bottom: 1px dotted #666;
-
-    scroll-margin-top: 20px;
 }
 
 
-.section-title {
+.section-heading {
     display: flex;
-
-    align-items: baseline;
 
     justify-content: space-between;
 
-    gap: 20px;
+    align-items: baseline;
 
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 
-.section-title span {
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+
+.section-heading span {
     color: #666;
 
     font-size: 12px;
 }
 
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* SOCIAL BUTTONS */
 
 .buttons {
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 8px;
 
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 
 .badge {
-    display: inline-block;
-
     padding: 7px 12px;
 
-    background: #d7d7d7;
+    background: #ddd;
 
-    color: #111;
+    color: black;
 
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #777777;
-    border-bottom: 2px solid #777777;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #777;
+    border-bottom: 2px solid #777;
 
     font-weight: bold;
 
@@ -244,120 +175,75 @@ section {
 }
 
 
-.badge:hover {
-    background: #ffffff;
-    color: #000000;
+/* TABS */
 
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   EXPANDABLE ENTRIES
-========================================================= */
-
-.entry {
-    border-top: 1px solid #202020;
-}
-
-
-.entry:last-child {
-    border-bottom: 1px solid #202020;
-}
-
-
-.entry summary {
+.tabs {
     display: flex;
 
-    align-items: center;
+    flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 6px;
+}
 
-    padding: 9px 8px;
+
+.category-tabs {
+    margin-bottom: 10px;
+}
+
+
+.project-tabs {
+    margin-bottom: 18px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.tab {
+    padding: 7px 11px;
+
+    border: 1px solid #555;
+
+    background: #111;
+
+    color: #ddd;
+
+    font-family: inherit;
 
     cursor: pointer;
-
-    list-style: none;
-
-    background: #0d0d0d;
-
-    font-weight: bold;
 }
 
 
-.entry:nth-of-type(even) summary {
-    background: #111;
+.tab:hover {
+    background: #ddd;
+
+    color: #000;
 }
 
 
-.entry summary::-webkit-details-marker {
-    display: none;
-}
-
-
-.entry summary::before {
-    content: "[+]";
-
-    flex-shrink: 0;
-
-    color: #777;
-}
-
-
-.entry[open] summary::before {
-    content: "[-]";
-}
-
-
-.entry summary:hover {
+.tab.active {
     background: #eeeeee;
 
     color: #000000;
+
+    border-color: white;
 }
 
 
-.entry summary:hover .entry-date {
-    color: #444;
+/* PROJECT VIEWER */
+
+.viewer {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 22px;
 }
 
 
-.entry-date {
-    flex-shrink: 0;
-
-    color: #888;
-}
-
-
-.entry-name {
-    flex: 1;
-}
-
-
-/* =========================================================
-   ENTRY CONTENT
-========================================================= */
-
-.entry-content {
-    padding: 18px;
-
-    background: #070707;
-
-    border-left: 1px solid #222;
-    border-right: 1px solid #222;
-}
-
-
-.entry-content img,
-.entry-content video {
-    display: block;
-
-    width: 100%;
-
-    max-height: 500px;
-
-    object-fit: cover;
-
-    margin-bottom: 18px;
+.viewer-media {
+    min-height: 330px;
 
     background: #111;
 
@@ -365,165 +251,80 @@ section {
 }
 
 
-.entry-content ul {
-    padding-left: 24px;
+.viewer-media img,
+.viewer-media video {
+    display: block;
 
-    color: #cccccc;
-}
+    width: 100%;
+    height: 100%;
 
-
-.tech {
-    color: #888;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   PROJECT LINKS
-========================================================= */
-
-.links {
-    margin-top: 18px;
-}
-
-
-.links span {
-    color: #666;
-}
-
-
-/* =========================================================
-   PLACEHOLDERS
-========================================================= */
-
-.media-placeholder {
-    display: flex;
-
-    min-height: 220px;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 18px;
-
-    background:
-        repeating-linear-gradient(
-            45deg,
-            #0d0d0d,
-            #0d0d0d 12px,
-            #111111 12px,
-            #111111 24px
-        );
-
-    border: 1px solid #333;
-
-    color: #555;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-size: 11px;
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
-.gallery {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-
-    margin-bottom: 18px;
-}
-
-
-.gallery img,
-.gallery .media-placeholder {
-    margin-bottom: 0;
-
-    height: 220px;
+    min-height: 330px;
+    max-height: 470px;
 
     object-fit: cover;
 }
 
 
-/* =========================================================
-   SOFTWARE LIST
-========================================================= */
-
-.software-list {
-    border-top: 1px solid #222;
+.viewer-info {
+    padding-top: 5px;
 }
 
 
-.software-row {
-    display: grid;
-
-    grid-template-columns: 170px 1fr;
-
-    gap: 20px;
-
-    padding: 8px;
-
-    border-bottom: 1px solid #171717;
+.viewer-info h3 {
+    margin-bottom: 12px;
 }
 
 
-.software-row:nth-child(odd) {
+.date {
+    margin-bottom: 7px;
+
+    font-size: 12px;
+}
+
+
+.tech {
+    margin-top: 20px;
+
+    font-size: 12px;
+}
+
+
+.project-links {
+    margin-top: 20px;
+}
+
+
+.project-links a {
+    margin-right: 10px;
+}
+
+
+/* BLOG */
+
+.blog-tabs {
+    margin-bottom: 15px;
+}
+
+
+.blog-viewer {
+    padding: 16px;
+
+    min-height: 140px;
+
     background: #0d0d0d;
+
+    border: 1px solid #222;
 }
 
 
-.software-row strong {
-    color: #ffffff;
-}
-
-
-.software-row span {
-    color: #888;
-}
-
-
-/* =========================================================
-   BLOG
-========================================================= */
-
-.blog-entry summary {
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-list p {
-    margin-bottom: 8px;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 footer {
     display: flex;
 
     justify-content: space-between;
 
-    align-items: center;
-
-    gap: 20px;
-
-    padding-top: 14px;
+    padding-top: 15px;
 
     color: #777;
 
@@ -531,29 +332,14 @@ footer {
 }
 
 
-footer span {
-    color: #777;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 650px) {
-
-    body {
-        font-size: 13px;
-    }
-
 
     .site {
         width: 100%;
 
-        padding: 14px;
-
-        border-left: none;
-        border-right: none;
+        border: none;
     }
 
 
@@ -562,66 +348,27 @@ footer span {
     }
 
 
-    .header-top {
-        flex-direction: column;
-
-        gap: 5px;
-    }
-
-
-    .status {
-        display: none;
-    }
-
-
-    nav {
-        line-height: 2;
-    }
-
-
-    .section-title {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 3px;
-    }
-
-
-    .entry summary {
-        align-items: flex-start;
-    }
-
-
-    .entry-date {
-        font-size: 11px;
-    }
-
-
-    .gallery {
+    .viewer {
         grid-template-columns: 1fr;
     }
 
 
-    .gallery img,
-    .gallery .media-placeholder {
-        height: auto;
-
-        min-height: 180px;
+    .viewer-media,
+    .viewer-media img,
+    .viewer-media video {
+        min-height: 230px;
     }
 
 
-    .software-row {
-        grid-template-columns: 1fr;
-
-        gap: 3px;
+    .section-heading {
+        display: block;
     }
 
 
     footer {
         flex-direction: column;
 
-        align-items: flex-start;
+        gap: 10px;
     }
 
 }
