@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #050505,
+            #050505 32px,
+            #161616 32px,
+            #161616 48px
+        );
+
+    color: #eeeeee;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+}
+
+
+.site {
+    width: min(820px, 94%);
+
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    background: #0b0b0b;
+
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+
+    padding: 18px;
+}
+
+
+header {
+    border-bottom: 1px dotted #777;
+
+    padding-bottom: 12px;
+}
+
+
+h1 {
+    margin: 0;
+
+    font-size: 32px;
+
+    letter-spacing: 2px;
+}
+
+
+.subtitle {
+    color: #888;
+
+    margin-top: 3px;
+}
+
+
+nav {
+    margin-top: 14px;
+
+    background: #111;
+
+    padding: 6px;
+}
+
+
+a {
+    color: white;
+}
+
+
+a:hover {
+    background: white;
+    color: black;
+}
+
+
+nav span {
+    color: #888;
+}
+
+
+section {
+    padding: 22px 0;
+
+    border-bottom: 1px dotted #777;
+}
+
+
+h2 {
+    margin: 0 0 16px;
+
+    font-size: 22px;
+}
+
+
+h3 {
+    margin-top: 0;
+
+    font-size: 18px;
+}
+
+
+p {
+    line-height: 1.45;
+}
+
+
+.buttons {
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.badge {
+    padding: 7px 12px;
+
+    background: #dddddd;
+
+    border: 2px outset #eeeeee;
+
+    color: black;
+
+    text-decoration: none;
+}
+
+
+.project {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 18px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.project:last-child {
+    border-bottom: none;
+}
+
+
+.project img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    background: #111;
+
+    border: 1px solid #555;
+}
+
+
+.date {
+    color: #888;
+}
+
+
+.project-links {
+    margin-top: 15px;
+}
+
+
+.project-links span {
+    color: #777;
+}
+
+
+.list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.list a {
+    display: block;
+
+    padding: 5px 8px;
+
+    text-decoration: underline;
+}
+
+
+.list a:nth-child(odd) {
+    background: #111;
+}
+
+
+.list span {
+    font-weight: bold;
+}
+
+
+footer {
+    padding-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #888;
+}
+
+
+@media (max-width: 650px) {
+
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+}
