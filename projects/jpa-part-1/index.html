@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>JPA Part 1 - sovepose40</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+
+        .game-page {
+            min-height: 650px;
+
+            padding: 20px 0 40px;
+        }
+
+        .game-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                330px;
+
+            padding-right: 14px;
+
+            gap: 30px;
+
+            align-items: start;
+        }
+
+        .game-info {
+            min-width: 0;
+        }
+
+        .game-info p {
+            margin-bottom: 15px;
+        }
+
+        .game-details {
+            line-height: 1.5;
+        }
+
+        .game-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 22px;
+        }
+
+        .game-buttons a {
+            display: inline-block;
+            padding: 8px 15px;
+            color: white;
+            background: #080808;
+            border: 1px solid #666;
+            text-decoration: none;
+        }
+
+        .game-buttons a:hover {
+            background: white;
+            color: black;
+            border-color: white;
+        }
+
+        .game-images {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .game-images img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #444;
+            background: #0b0b0b;
+        }
+
+        @media (max-width: 650px) {
+
+            .game-layout {
+                grid-template-columns: 1fr;
+                padding-right: 0;
+            }
+
+            .game-images {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+
+        <div class="title-row">
+
+            <h1>
+                Sovepose40
+            </h1>
+
+        </div>
+
+        <nav>
+
+            <a href="../../">
+                homepage
+            </a>
+
+            <span>...</span>
+
+            <a href="../">
+                projects
+            </a>
+
+            <span>...</span>
+
+            <a href="../../gallery/">
+                gallery
+            </a>
+
+            <span>...</span>
+
+            <a href="../../about/">
+                about
+            </a>
+
+            <span>...</span>
+
+            <a href="../../contact/">
+                contact
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main class="game-page">
+
+        <div class="game-layout">
+
+            <div class="game-info">
+
+                <p class="game-details">
+                    Developed by: sovepose40<br>
+                    Project: JPA Part 1
+                </p>
+
+                <p>
+                    JPA Part 1 is a new project currently in development.
+                </p>
+
+                <p>
+                    More details and updates will be added here as the project develops.
+                </p>
+
+                <div class="game-buttons">
+
+                    <a
+                        href="https://sovepose40.itch.io/john-pork-adventures"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View on itch.io
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="game-images">
+
+                <img
+                    src="../../images/jpa.png"
+                    alt="JPA Part 1 project artwork"
+                >
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div>
+
+            <a href="../../">
+                homepage
+            </a>
+
+            <span>...</span>
+
+            <a href="../">
+                projects
+            </a>
+
+            <span>...</span>
+
+            <a href="../../gallery/">
+                gallery
+            </a>
+
+            <span>...</span>
+
+            <a href="../../about/">
+                about
+            </a>
+
+            <span>...</span>
+
+            <a href="../../contact/">
+                contact
+            </a>
+
+        </div>
+
+        <span>
+            © 2026 Sovepose40. All rights reserved.
+        </span>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

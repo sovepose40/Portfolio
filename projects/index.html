@@ -3,29 +3,145 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projects - Adam Kjær Persson</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Projects - sovepose40</title>
 
     <link rel="stylesheet" href="../style.css">
+
+
+    <!-- ONLY affects this Projects page -->
+    <style>
+
+        .projects-page {
+            min-height: 650px;
+            padding: 25px 0 40px;
+        }
+
+
+        .projects-page h2 {
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================
+           PROJECT LIST
+        ===================================== */
+
+        .project-list {
+            width: 100%;
+
+            border-top: 1px solid #222;
+        }
+
+
+        .project-row {
+            display: grid;
+
+            grid-template-columns: 100px 1fr;
+
+            gap: 10px;
+
+            width: 100%;
+
+            padding: 4px 8px;
+
+            color: white;
+
+            background: #0d0d0d;
+
+            border-bottom: 1px solid #181818;
+
+            text-decoration: none;
+        }
+
+
+        .project-row:nth-child(even) {
+            background: #090909;
+        }
+
+
+        .project-row:hover {
+            background: #181818;
+            color: white;
+        }
+
+
+        .project-date {
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+
+
+        .project-name {
+            white-space: nowrap;
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================
+           ITCH LINK
+        ===================================== */
+
+        .more-projects {
+            margin-top: 25px;
+
+            color: #aaa;
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 650px) {
+
+            .project-row {
+                grid-template-columns: 80px 1fr;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
 <div class="page">
 
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
     <header>
 
         <div class="title-row">
-            <h1>Adam Kjær Persson</h1>
-            <span class="year">© 2026</span>
+
+            <h1>
+                Sovepose40
+            </h1>
+
+
         </div>
 
-        <nav>
+
+       <nav>
             <a href="../">homepage</a>
             <span>...</span>
 
             <a href="./">projects</a>
+            <span>...</span>
+
+            <a href="../gallery/">gallery</a>
             <span>...</span>
 
             <a href="../about/">about</a>
@@ -37,109 +153,197 @@
     </header>
 
 
-    <main class="content-page">
 
-        <h2>All Projects</h2>
+    <!-- =====================================
+         PROJECTS
+    ====================================== -->
 
-        <p>
-            Games, gameplay systems, prototypes and other work.
-        </p>
+    <main class="projects-page">
+
+        <h2>
+            All Projects
+        </h2>
 
 
-        <div class="all-projects">
+        <div class="project-list">
+
+
+            <!-- PROJECT 01 -->
 
             <a
-                href="machine-party/"
-                class="all-project-row"
+                href="feed-it/"
+                class="project-row"
             >
-                <strong>[2026]</strong>
 
-                <span>
-                    Machine Party
+                <span class="project-date">
+                    [2026]
                 </span>
 
-                <span class="project-type">
-                    GAME
+                <span class="project-name">
+                    FEED IT
                 </span>
+
             </a>
 
 
+
+            <!-- PROJECT 02 -->
+
             <a
-                href="parkour-system/"
-                class="all-project-row"
+                href="one-more-game/"
+                class="project-row"
             >
-                <strong>[2026]</strong>
 
-                <span>
-                    Parkour System
+                <span class="project-date">
+                    [2026]
                 </span>
 
-                <span class="project-type">
-                    SYSTEM
+                <span class="project-name">
+                    One More Game
                 </span>
+
+            </a>
+
+            <!-- PROJECT 06 -->
+
+            <a
+                href="tpunit/"
+                class="project-row"
+            >
+
+                <span class="project-date">
+                    [2026]
+                </span>
+
+                <span class="project-name">
+                    Trash processing unit 4304
+                </span>
+
             </a>
 
 
+            <!-- PROJECT 04 -->
+
             <a
-                href="combat-prototype/"
-                class="all-project-row"
+                href="jpa-part-1/"
+                class="project-row"
             >
-                <strong>[2026]</strong>
 
-                <span>
-                    Combat Prototype
+                <span class="project-date">
+                    [2026]
                 </span>
 
-                <span class="project-type">
-                    PROTOTYPE
+                <span class="project-name">
+                    JPA Part 1
                 </span>
+
             </a>
 
 
-            <!--
-            ADD NEW PROJECTS BY COPYING THIS:
+            <!-- PROJECT 05 -->
 
             <a
-                href="your-project-folder/"
-                class="all-project-row"
+                href="tell-tale-heart/"
+                class="project-row"
             >
-                <strong>[2026]</strong>
 
-                <span>
-                    Your Project
+                <span class="project-date">
+                    [2026]
                 </span>
 
-                <span class="project-type">
-                    SYSTEM
+                <span class="project-name">
+                    The Tell-Tale Heart
                 </span>
+
             </a>
-            -->
+
+
+            <!-- PROJECT 06 -->
+
+            <a
+                href="call-from-john-pork/"
+                class="project-row"
+            >
+
+                <span class="project-date">
+                    [2026]
+                </span>
+
+                <span class="project-name">
+                    Call from John Pork
+                </span>
+
+            </a>
+
+
+
+
 
         </div>
+
+
+        <p class="more-projects">
+
+            More smaller games and experiments can be found on my
+
+            <a
+                href="https://sovepose40.itch.io/"
+                target="_blank"
+            >
+                itch.io page.
+            </a>
+
+        </p>
 
     </main>
 
 
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
     <footer>
 
         <div>
-            <a href="../">homepage</a>
+
+            <a href="../">
+                homepage
+            </a>
+
             <span>...</span>
 
-            <a href="./">projects</a>
+            <a href="./">
+                projects
+            </a>
+
             <span>...</span>
 
-            <a href="../about/">about</a>
+            <a href="../gallery/">
+                gallery
+            </a>
+
             <span>...</span>
 
-            <a href="../contact/">contact</a>
+            <a href="../about/">
+                about
+            </a>
+
+            <span>...</span>
+
+            <a href="../contact/">
+                contact
+            </a>
+
         </div>
 
+
         <span>
-            Adam Kjær Persson © 2026
+            © 2026 Sovepose40. All rights reserved.
         </span>
 
     </footer>
+
 
 </div>
 
