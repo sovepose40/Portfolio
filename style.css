@@ -106,8 +106,6 @@ a:hover {
 
 header {
     padding-bottom: 10px;
-
-    border-bottom: 1px solid #444;
 }
 
 .title-row {
@@ -188,6 +186,9 @@ section {
 
 .intro {
     padding-top: 18px;
+
+    border-top: 1px dotted #666;
+    border-bottom: 1px dotted #666;
 }
 
 .intro p {
@@ -345,6 +346,10 @@ section {
 
 .tools {
     margin-top: 15px;
+
+    color: #aaa;
+
+    font-size: 11px;
 }
 
 /* =========================================================
