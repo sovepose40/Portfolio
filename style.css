@@ -1,5 +1,5 @@
 /* =========================================================
-   RESET
+   BASIC
 ========================================================= */
 
 * {
@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -18,8 +19,8 @@ body {
             135deg,
             #020202,
             #020202 40px,
-            #090909 40px,
-            #090909 56px
+            #0a0a0a 40px,
+            #0a0a0a 56px
         );
 
     color: #eeeeee;
@@ -43,8 +44,10 @@ body {
     min-height: 100vh;
 
     margin: 0 auto;
+    padding: 14px;
 
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
 
     background: #050505;
 
@@ -56,7 +59,7 @@ body {
 
 
 /* =========================================================
-   GENERAL TEXT
+   TEXT
 ========================================================= */
 
 h1,
@@ -66,14 +69,14 @@ p {
 }
 
 h1 {
-    margin-bottom: 8px;
+    margin: 0;
 
     font-size: 28px;
     font-weight: 900;
 
     letter-spacing: 1px;
 
-    text-shadow: 2px 2px #333;
+    text-shadow: 2px 2px 0 #333;
 }
 
 h2 {
@@ -87,12 +90,13 @@ p {
 }
 
 a {
-    color: #ffffff;
+    color: white;
+    text-decoration: underline;
 }
 
 a:hover {
-    background: #ffffff;
-    color: #000000;
+    color: black;
+    background: white;
 }
 
 
@@ -101,13 +105,15 @@ a:hover {
 ========================================================= */
 
 header {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 
     border-bottom: 1px dotted #555;
 }
 
 nav {
-    padding: 4px 6px;
+    margin-top: 7px;
+
+    padding: 3px 5px;
 
     background: #080808;
 
@@ -125,12 +131,12 @@ nav span {
 ========================================================= */
 
 section {
-    padding: 20px 0;
+    padding: 18px 0;
 
     border-bottom: 1px dotted #555;
 }
 
-.section-title {
+.section-heading {
     display: flex;
 
     justify-content: space-between;
@@ -138,10 +144,10 @@ section {
 
     gap: 20px;
 
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 }
 
-.section-title span {
+.section-heading span {
     color: #777;
 
     font-size: 10px;
@@ -153,27 +159,32 @@ section {
 ========================================================= */
 
 .intro {
-    padding-top: 18px;
+    padding-top: 16px;
 }
 
-.intro-text p {
+.intro p {
     margin-bottom: 7px;
 }
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
 
 .socials {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 6px;
 
-    margin-top: 16px;
+    margin-top: 14px;
 }
 
 .socials a {
     padding: 6px 12px;
 
-    background: #080808;
     color: white;
+    background: #080808;
 
     border: 1px solid #555;
 
@@ -188,8 +199,8 @@ section {
 .socials a:hover {
     transform: translateY(-2px);
 
-    background: white;
     color: black;
+    background: white;
 
     border-color: white;
 }
@@ -211,6 +222,10 @@ section {
 .work-card {
     display: block;
 
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
     overflow: hidden;
 
     background: #000;
@@ -227,23 +242,31 @@ section {
 .work-card:hover {
     transform: scale(1.025);
 
-    border-color: #888;
-
     background: #000;
+
+    border-color: #888;
 }
+
+
+/*
+    CONTAIN means the ENTIRE image fits inside the card.
+
+    This fixes Tell-Tale Heart being too big/cropped.
+*/
 
 .work-card img {
     display: block;
 
     width: 100%;
+    height: 100%;
 
-    aspect-ratio: 16 / 9;
+    object-fit: contain;
 
-    object-fit: cover;
+    background: #000;
 }
 
-.more-link {
-    margin-top: 14px;
+.more-work {
+    margin-top: 13px;
     margin-bottom: 0;
 
     color: #999;
@@ -253,19 +276,32 @@ section {
 
 
 /* =========================================================
-   OTHER WORK
+   NORMAL PAGES
 ========================================================= */
 
-.other-work {
-    padding: 12px;
-
-    background: #080808;
-
-    border: 1px solid #292929;
+.page-content {
+    padding: 22px 0 35px;
 }
 
-.other-work p {
-    margin-bottom: 8px;
+.page-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: baseline;
+
+    gap: 20px;
+
+    margin-bottom: 16px;
+}
+
+.page-heading h2 {
+    margin: 0;
+}
+
+.page-heading span {
+    color: #777;
+
+    font-size: 10px;
 }
 
 
@@ -273,14 +309,102 @@ section {
    ABOUT
 ========================================================= */
 
-.about p {
-    margin-bottom: 9px;
+.about-text {
+    max-width: 640px;
+}
+
+.about-text p {
+    margin-bottom: 12px;
 }
 
 .tools {
+    margin-top: 22px;
+
     color: #999;
 
     font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.contact-links a {
+    padding: 3px 5px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-intro {
+    max-width: 620px;
+
+    margin-bottom: 18px;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+
+    align-items: start;
+}
+
+
+/*
+    Gallery images are deliberately kept small.
+*/
+
+.gallery-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 160px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border: 1px solid #333;
+
+    transition:
+        transform 0.12s ease,
+        border-color 0.12s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+
+    border-color: #777;
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
 }
 
 
@@ -289,6 +413,8 @@ section {
 ========================================================= */
 
 footer {
+    margin-top: auto;
+
     display: flex;
 
     justify-content: space-between;
@@ -296,11 +422,15 @@ footer {
 
     gap: 20px;
 
-    padding-top: 18px;
+    padding-top: 14px;
 
     color: #777;
 
     font-size: 10px;
+}
+
+footer span {
+    color: #777;
 }
 
 
@@ -308,40 +438,74 @@ footer {
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .site {
         width: 100%;
 
-        border-left: 0;
-        border-right: 0;
+        border-left: none;
+        border-right: none;
     }
+
 
     h1 {
         font-size: 23px;
     }
 
+
     nav {
         line-height: 2;
     }
+
 
     .work-grid {
         grid-template-columns: 1fr;
     }
 
-    .section-title {
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .gallery-item {
+        height: 145px;
+    }
+
+
+    .section-heading,
+    .page-heading {
         display: block;
     }
 
-    .section-title span {
+
+    .section-heading span,
+    .page-heading span {
         display: block;
 
         margin-top: 3px;
     }
 
+
     footer {
         flex-direction: column;
+
         align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-item {
+        height: 190px;
     }
 
 }
