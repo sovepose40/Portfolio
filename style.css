@@ -191,6 +191,19 @@ section {
     border-bottom: 1px dotted #666;
 }
 
+.intro-top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.intro-copy {
+    flex: 1;
+}
+
 .intro p {
     margin-bottom: 7px;
 }
@@ -316,6 +329,22 @@ section {
 
 .other-stuff-box p {
     margin-bottom: 10px;
+}
+
+.cube-gif {
+    display: block;
+
+    width: min(180px, 100%);
+    height: auto;
+
+    margin-bottom: 12px;
+}
+
+.intro-top .cube-gif {
+    flex: 0 0 150px;
+
+    width: 150px;
+    margin: 0;
 }
 
 
@@ -502,6 +531,26 @@ section {
     border-color: #777;
 }
 
+.gallery-item.coming-soon {
+    color: #777;
+
+    border-style: dashed;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.gallery-item.coming-soon:hover {
+    transform: none;
+    border-color: #333;
+}
+
+.gallery-item:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
 .gallery-item img {
     display: block;
 
@@ -509,6 +558,77 @@ section {
     height: 100%;
 
     object-fit: contain;
+}
+
+.viewer-open {
+    overflow: hidden;
+}
+
+.image-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.88);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.18s ease, visibility 0.18s ease;
+}
+
+.image-viewer.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-viewer-image {
+    display: block;
+
+    max-width: min(94vw, 1100px);
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border: 1px solid #777;
+    box-shadow: 0 0 0 6px #000;
+
+    transform: scale(0.96);
+
+    transition: transform 0.18s ease;
+}
+
+.image-viewer.is-open .image-viewer-image {
+    transform: scale(1);
+}
+
+.image-viewer-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+
+    width: 38px;
+    height: 38px;
+
+    color: #fff;
+    background: #111;
+
+    border: 1px solid #777;
+
+    font: inherit;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-viewer-close:hover {
+    color: #000;
+    background: #fff;
 }
 
 
@@ -572,6 +692,17 @@ footer span {
     }
 
 
+    .intro-top {
+        display: block;
+    }
+
+
+    .intro-top .cube-gif {
+        width: 150px;
+        margin-top: 14px;
+    }
+
+
     .gallery-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
@@ -580,6 +711,11 @@ footer span {
 
     .gallery-item {
         height: 145px;
+    }
+
+
+    .image-viewer {
+        padding: 18px;
     }
 
 
